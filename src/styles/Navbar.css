@@ -1,24 +1,58 @@
 .navbar-container {
   position: fixed;
   right: 0;
-  background-color: black;
   color: white;
+  display: grid;
+  grid-template-areas:
+    "button wantlist"
+    "button wantlist";
 }
 
-.navbar-container h1 {
-  padding-left: 0.5rem;
-  font-size: 3rem;
+.headerBtn {
+  background-color: black;
+  cursor: pointer;
+  grid-area: button;
+  padding: 1rem;
+  transition: transform 500ms ease-in-out;
 }
 
 .want-list {
-  display: flex;
+  background-color: black;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "container container container";
+  grid-area: wantlist;
+  transition: transform 500ms ease-in-out;
+}
+
+.want-list h1 {
+  background-color: black;
+  font-size: 3rem;
+  grid-area: header;
 }
 
 .character-container img {
-  height: 150px;
+  height: 170px;
 }
 .character-container div {
   font-size: 1.3rem;
   font-weight: bold;
   padding: 0.5rem 0.5rem;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.want-list.closed {
+  transform: translateX(100%);
+}
+
+.headerBtn.open {
+  transform: translateX(0);
+}
+
+.headerBtn.closed {
+  transform: translateX(960%);
 }
