@@ -13,7 +13,7 @@
   cursor: pointer;
   grid-area: button;
   padding: 1rem;
-  transition: transform 500ms ease-in-out;
+  transition: transform 250ms ease-in-out;
 }
 
 .want-list {
@@ -23,7 +23,7 @@
     "header header header"
     "container container container";
   grid-area: wantlist;
-  transition: transform 500ms ease-in-out;
+  transition: transform 250ms ease-in-out;
 }
 
 .want-list h1 {
@@ -54,5 +54,5 @@
 }
 
 .headerBtn.closed {
-  transform: translateX(960%);
+  transform: translateX(980%);
 }

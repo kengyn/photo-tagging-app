@@ -7,17 +7,17 @@ const Navbar = () => {
     const wantList = document.querySelector(".want-list");
     const closeModule = () => {
       if (wantList.classList.contains("closed")) {
-        headerBtn.src = require("../assets/images/arrow-collapse-right.png");
         wantList.classList.remove("closed");
         wantList.classList.add("open");
         headerBtn.classList.remove("closed");
         headerBtn.classList.add("open");
+        headerBtn.src = require("../assets/images/arrow-collapse-right.png");
       } else {
-        headerBtn.src = require("../assets/images/arrow-collapse-left.png");
         wantList.classList.remove("open");
         wantList.classList.add("closed");
         headerBtn.classList.remove("open");
         headerBtn.classList.add("closed");
+        headerBtn.src = require("../assets/images/arrow-collapse-left.png");
       }
     };
 
@@ -38,6 +38,10 @@ const Navbar = () => {
       <div className="want-list open">
         <h1>WANT LIST</h1>
         <div className="character-container">
+          <img src={require("../assets/images/bobminion.webp")} alt="bob" />
+          <div>BOB</div>
+        </div>
+        <div className="character-container">
           <img src={require("../assets/images/eincowboybebop.jpg")} alt="ein" />
           <div>EIN</div>
         </div>
@@ -47,10 +51,6 @@ const Navbar = () => {
             alt="saitama"
           />
           <div>SAITAMA</div>
-        </div>
-        <div className="character-container">
-          <img src={require("../assets/images/waldo.png")} alt="waldo" />
-          <div>WALDO</div>
         </div>
       </div>
     </div>

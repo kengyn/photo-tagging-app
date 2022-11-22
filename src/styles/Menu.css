@@ -1,0 +1,25 @@
+.menu-container {
+  background-color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  /* padding: 0.3rem; */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item img {
+  width: 30px;
+}
+
+.menu-item p {
+  padding: 0.3rem;
+}
+
+.menu-item:hover {
+  background-color: rgb(240, 234, 234);
+}
