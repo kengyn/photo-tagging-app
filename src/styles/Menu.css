@@ -1,3 +1,16 @@
+/* .target-menu-container {
+  position: absolute;
+} */
+
+.target-container {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 3px red dashed;
+}
+
 .menu-container {
   background-color: white;
   position: absolute;
