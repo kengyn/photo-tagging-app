@@ -98,7 +98,7 @@ function App() {
   return (
     <main>
       <Notification color={notiColor} />
-      <Navbar />
+      <Navbar color={notiColor} />
       <Menu
         x={left}
         y={top}

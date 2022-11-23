@@ -35,7 +35,7 @@
 .character-container img {
   height: 170px;
 }
-.character-container div {
+.character-container div:last-child {
   font-size: 1.3rem;
   font-weight: bold;
   padding: 0.5rem 0.5rem;
@@ -55,4 +55,16 @@
 
 .headerBtn.closed {
   transform: translateX(980%);
+}
+
+.character-container {
+  position: relative;
+}
+
+.captured {
+  position: absolute;
+  left: 20%;
+  bottom: 20%;
+  color: red;
+  font-size: 12rem;
 }

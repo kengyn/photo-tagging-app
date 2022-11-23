@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import "../styles/Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ color }) => {
   useEffect(() => {
     const headerBtn = document.querySelector(".headerBtn");
     const wantList = document.querySelector(".want-list");
+    const characters = document.querySelectorAll(".character-container");
+
     const closeModule = () => {
       if (wantList.classList.contains("closed")) {
         wantList.classList.remove("closed");
@@ -20,6 +22,14 @@ const Navbar = () => {
         headerBtn.src = require("../assets/images/arrow-collapse-left.png");
       }
     };
+
+    if (color[1] === true) {
+      characters.forEach((char) => {
+        if (char.firstChild.classList[0] === color[0]) {
+          char.firstChild.style.display = "inline";
+        }
+      });
+    }
 
     headerBtn.addEventListener("click", closeModule);
     return () => {
@@ -38,14 +48,23 @@ const Navbar = () => {
       <div className="want-list open">
         <h1>WANT LIST</h1>
         <div className="character-container">
+          <div className="Bob captured" style={{ display: "none" }}>
+            x
+          </div>
           <img src={require("../assets/images/bobminion.webp")} alt="bob" />
           <div>BOB</div>
         </div>
         <div className="character-container">
+          <div className="Ein captured" style={{ display: "none" }}>
+            x
+          </div>
           <img src={require("../assets/images/eincowboybebop.jpg")} alt="ein" />
           <div>EIN</div>
         </div>
         <div className="character-container">
+          <div className="Saitama captured" style={{ display: "none" }}>
+            x
+          </div>
           <img
             src={require("../assets/images/saitamaonepunch.jpg")}
             alt="saitama"
