@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import "../styles/Notification.css";
 
-const Notification = ({ color }) => {
+const Notification = ({ color, allDetained }) => {
   useEffect(() => {
     const noti = document.querySelector(".notification-container");
+    const main = document.querySelector(".main-image");
 
     if (color[1] === true) {
       noti.style.display = "inline";
@@ -18,16 +19,26 @@ const Notification = ({ color }) => {
       setTimeout(() => (noti.style.display = "none"), 1000);
     }
 
+    if (allDetained === true) {
+      noti.style.display = "inline";
+      noti.style.backgroundColor = "#4163a3";
+      noti.textContent = "All criminals detained. Good job.";
+      main.style.pointerEvents = "none";
+    }
+
     return () => clearTimeout(setTimeout(() => (noti.style.display = "none")));
-  });
+  }, [allDetained, color]);
 
   return (
-    <div
-      className="notification-container"
-      style={{ backgroundColor: "#db1b11" }}
-    >
-      no
-    </div>
+    <>
+      <div
+        className="notification-container"
+        style={{ backgroundColor: "#db1b11" }}
+      >
+        no
+      </div>
+      <form style={{ display: "none" }}>f</form>
+    </>
   );
 };
 

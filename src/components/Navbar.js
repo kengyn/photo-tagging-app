@@ -7,7 +7,7 @@ const Navbar = ({ color, allDetained }) => {
   const [time, setTime] = useState(0);
 
   useEffect(() => {
-    if (allDetained == true) {
+    if (allDetained === true) {
       setIsPaused(true);
     }
     let interval = null;

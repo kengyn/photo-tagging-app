@@ -1,3 +1,5 @@
+import { app, db } from "./firebase/config";
+import { addDoc } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { Menu } from "./components/Menu";
 import { Navbar } from "./components/Navbar";
@@ -109,7 +111,7 @@ function App() {
 
   return (
     <main>
-      <Notification color={notiColor} />
+      <Notification color={notiColor} allDetained={allDetained} />
       <Navbar color={notiColor} allDetained={allDetained} />
       <Menu
         x={left}
