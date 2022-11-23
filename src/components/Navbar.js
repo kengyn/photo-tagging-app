@@ -1,8 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Navbar.css";
+import { Timer } from "./Timer";
 
-const Navbar = ({ color }) => {
+const Navbar = ({ color, allDetained }) => {
+  const [isPaused, setIsPaused] = useState(false);
+  const [time, setTime] = useState(0);
+
   useEffect(() => {
+    if (allDetained == true) {
+      setIsPaused(true);
+    }
+    let interval = null;
+
+    if (isPaused === false) {
+      interval = setInterval(() => {
+        setTime((time) => time + 10);
+      }, 10);
+    } else {
+      clearInterval(interval);
+    }
     const headerBtn = document.querySelector(".headerBtn");
     const wantList = document.querySelector(".want-list");
     const characters = document.querySelectorAll(".character-container");
@@ -34,8 +50,9 @@ const Navbar = ({ color }) => {
     headerBtn.addEventListener("click", closeModule);
     return () => {
       headerBtn.removeEventListener("click", closeModule);
+      clearInterval(interval);
     };
-  });
+  }, [isPaused, allDetained, color]);
 
   return (
     <div className="navbar-container">
@@ -47,6 +64,7 @@ const Navbar = ({ color }) => {
 
       <div className="want-list open">
         <h1>WANT LIST</h1>
+        <Timer time={time} />
         <div className="character-container">
           <div className="Bob captured" style={{ display: "none" }}>
             x

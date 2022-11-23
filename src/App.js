@@ -40,6 +40,7 @@ function App() {
   const [detained, setDetained] = useState(wantedList);
   const [suspect, setSuspect] = useState([]);
   const [notiColor, setNotiColor] = useState([""]);
+  const [allDetained, setAllDetained] = useState(false);
 
   function handleDetained(selected) {
     const newDetainList = detained.map((obj) => {
@@ -51,6 +52,15 @@ function App() {
     });
 
     setDetained(newDetainList);
+  }
+
+  function checkAllDetained() {
+    let check = (detained) =>
+      detained.every((detainee) => detainee.found === true);
+
+    if (check(detained) === true) {
+      setAllDetained(true);
+    }
   }
 
   function clearSuspect() {
@@ -90,6 +100,8 @@ function App() {
 
     image.addEventListener("click", findWanted);
 
+    checkAllDetained();
+
     return () => {
       image.removeEventListener("click", findWanted);
     };
@@ -98,7 +110,7 @@ function App() {
   return (
     <main>
       <Notification color={notiColor} />
-      <Navbar color={notiColor} />
+      <Navbar color={notiColor} allDetained={allDetained} />
       <Menu
         x={left}
         y={top}

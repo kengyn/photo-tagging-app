@@ -20,7 +20,7 @@
   background-color: black;
   display: grid;
   grid-template-areas:
-    "header header header"
+    "header header subheader"
     "container container container";
   grid-area: wantlist;
   transition: transform 250ms ease-in-out;
@@ -30,6 +30,14 @@
   background-color: black;
   font-size: 3rem;
   grid-area: header;
+}
+
+.want-list h2 {
+  grid-area: subheader;
+  font-size: 3rem;
+  align-self: center;
+  justify-self: flex-end;
+  padding-right: 1rem;
 }
 
 .character-container img {
@@ -54,7 +62,7 @@
 }
 
 .headerBtn.closed {
-  transform: translateX(980%);
+  transform: translateX(1025%);
 }
 
 .character-container {
