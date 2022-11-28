@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/photo-tagging-app/static/css/main.de619dd9.css",
+    "main.js": "/photo-tagging-app/static/js/main.e54f076f.js",
+    "static/media/Universe-113.jpg": "/photo-tagging-app/static/media/Universe-113.3d9dcedc134b0035b699.jpg",
+    "static/media/eincowboybebop.jpg": "/photo-tagging-app/static/media/eincowboybebop.c67c2807b49f7c6cc9d9.jpg",
+    "static/media/saitamaonepunch.jpg": "/photo-tagging-app/static/media/saitamaonepunch.b91429f8ca9b7b6e1bac.jpg",
+    "static/media/sai-closeup.jpg": "/photo-tagging-app/static/media/sai-closeup.62344ab7da7b8f9f50ac.jpg",
+    "static/media/bob-closeup.webp": "/photo-tagging-app/static/media/bob-closeup.7ac7f36da77f648c2cc1.webp",
+    "static/media/ein-closeup.jpg": "/photo-tagging-app/static/media/ein-closeup.237781617e7a3ff49970.jpg",
+    "static/media/bobminion.webp": "/photo-tagging-app/static/media/bobminion.188277306510a21e7b2b.webp",
+    "index.html": "/photo-tagging-app/index.html",
+    "main.de619dd9.css.map": "/photo-tagging-app/static/css/main.de619dd9.css.map",
+    "main.e54f076f.js.map": "/photo-tagging-app/static/js/main.e54f076f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de619dd9.css",
+    "static/js/main.e54f076f.js"
+  ]
+}
